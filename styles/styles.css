@@ -101,11 +101,15 @@ li a {
 /* About me section */
 #about-me {
   display: flex;
-  height: 40vh;
+  /* height: 40vh; */
   justify-content: space-between;
 }
 .about-me-left {
   width: 55%;
+}
+
+.about-me-right {
+  height: 40vh;
 }
 
 .about-me-description {
