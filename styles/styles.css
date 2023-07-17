@@ -166,6 +166,7 @@ li a {
   justify-content: center;
   gap: 1rem;
   padding: 1rem 2rem;
+  transition: all 0.5s ease-in-out;
 }
 
 .project-card {
@@ -239,17 +240,28 @@ h2 {
 }
 
 /* Project-cards */
+.project-card a:link,
+.project-card a:visited {
+  filter: brightness(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.project-card a:hover,
+.project-card a:active {
+  filter: brightness(0.5);
+}
 .project-card img {
   display: block;
   width: 100%;
-  height: 70%;
+  height: 17rem;
   object-fit: cover;
+  border-bottom: 7px solid #ffd369;
 }
 
 .project-card h3 {
   text-align: center;
-  font-size: 1.1rem;
-  margin: 0;
+  font-size: 1.3rem;
+  margin: 1rem 0;
 }
 
 .project-card ul {
@@ -258,9 +270,19 @@ h2 {
   margin: 0;
 }
 
-.project-card li:last-child {
+.project-card li {
   display: inline-block;
   margin-right: 0.5rem;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.project-card li:last-child img {
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+  object-fit: cover;
+  border-bottom: none;
 }
 
 /* Skills styles */
