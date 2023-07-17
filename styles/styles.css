@@ -148,14 +148,18 @@ li a {
 }
 
 /* Projects */
-#projects {
+#projects,
+#skills {
   background-color: #ffd369;
   border-radius: 0.75rem;
   margin: 4rem auto;
 }
-
 .projects-wrapper {
   background-color: #393e46;
+  padding: 2.5rem;
+}
+
+.project-cards {
   /* border-radius: 0.55rem; */
   display: flex;
   flex-wrap: wrap;
@@ -166,8 +170,8 @@ li a {
 
 .project-card {
   background-color: #eee;
-  height: 20rem;
-  width: 22%;
+  min-height: 22rem;
+  width: 18rem;
   border-radius: 0.35rem;
   overflow: hidden;
 }
@@ -204,13 +208,13 @@ li a {
   font-size: 1.6rem;
   border: none;
   cursor: pointer;
+  display: block;
 }
 
 .btn-see-more {
   background-color: #ffd369;
   color: #393e46;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 2rem auto;
 }
 
 .btn:hover {
@@ -230,7 +234,97 @@ h2 {
   font-size: 1.5rem;
   font-weight: bold;
   padding: 1rem 5%;
+  text-transform: uppercase;
   /* background-color: #393e46; */
+}
+
+/* Project-cards */
+.project-card img {
+  display: block;
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.project-card ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.project-card li:last-child {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+/* Skills styles */
+.skills,
+.skills-learning {
+  /* background-color: tomato; */
+  background-color: #eee;
+  padding: 1.5rem 0;
+  margin-bottom: 2rem;
+}
+
+#skills h3 {
+  color: #393e46;
+  font-size: 1.2rem;
+  margin-left: 3rem;
+}
+
+.skills-list {
+  display: flex;
+  /* background-color: tomato; */
+  padding: 2rem 0;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#skills li {
+  height: 7rem;
+  width: 7rem;
+  margin: 1rem 3rem;
+}
+
+.skills-list li img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Contact-me Page Styles */
+.contact-me-main {
+  border-radius: 0.5rem;
+}
+.contact-me-main p {
+  font-size: 1.6rem;
+}
+
+.contact-me-main ul {
+  background-color: #ffd369;
+  padding: 3rem 2rem;
+  border-radius: 0.5rem;
+}
+
+.contact-me-main li {
+  display: inline-block;
+  margin-right: 2rem;
+  background-color: #eee;
+  padding: 3rem;
+  border-radius: 50%;
+}
+
+.contact-me-main img {
+  height: 5rem;
+  width: 5rem;
+  object-fit: cover;
 }
 
 /* Footer Styles */
