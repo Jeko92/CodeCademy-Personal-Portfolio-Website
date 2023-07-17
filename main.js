@@ -97,6 +97,70 @@ const allProjects = [
     description: "Responsive Design practice",
     technologies: ["html5", "css3"],
   },
+  {
+    name: "20,000 Leagues under the Sea",
+    href: "18-20000-Leagues-Under-The-Sea",
+    imgSrc: "20000leagues.png",
+    imgDescription: "20,000 Leagues undet the sea",
+    description: "CSS Animations and Transitions practice",
+    technologies: ["html5", "css3"],
+  },
+  {
+    name: "Game: Number Guesser",
+    href: "19-Number-Guesser",
+    imgSrc: "numberguesser.png",
+    imgDescription: "Number Guesser Game",
+    description: "JavaScript Fundamentals practice",
+    technologies: ["html5", "css3", "javascript"],
+  },
+  {
+    name: "Game: Guess My Number",
+    href: "20-Guess-My-number",
+    imgSrc: "guessmynumber.png",
+    imgDescription: "Guess My Number Game",
+    description: "JavaScript Fundamentals practice",
+    technologies: ["html5", "css3", "javascript"],
+  },
+  {
+    name: "Credit Card Checker",
+    href: "21-Credit-Cards-Checker",
+    imgSrc: "credit-card.jpg",
+    imgDescription: "JavaScript Program For Credit Card Validation",
+    description: "JavaScript Iterables practice",
+    technologies: ["html5", "css3", "javascript"],
+  },
+  {
+    name: "Mysterious Organims",
+    href: "22-Mysterious-Organisms",
+    imgSrc: "mysteriousorganisms.jpg",
+    imgDescription: "JavaScript Program to Practice Iterables",
+    description: "JavaScript Iterables practice",
+    technologies: ["html5", "css3", "javascript"],
+  },
+  {
+    name: "Form A Story",
+    href: "23-Form-a-Story",
+    imgSrc: "formastory.png",
+    imgDescription: "JavaScript Form Validation Practice ",
+    description: "JavaScript Form Validation practice",
+    technologies: ["html5", "css3", "javascript"],
+  },
+  {
+    name: "Davie's Burgers Form",
+    href: "24-HTML-Forms",
+    imgSrc: "htmlforms.png",
+    imgDescription: "JavaScript Forms Practice ",
+    description: "HTML Forms practice",
+    technologies: ["html5", "css3", "javascript"],
+  },
+  {
+    name: "Brief History Of Programming",
+    href: "25-Brief-History-Of-Programming",
+    imgSrc: "historyofprogramming.png",
+    imgDescription: "JavaScript Accessibility Practice ",
+    description: "Accessibility practice",
+    technologies: ["html5", "css3", "javascript"],
+  },
 ];
 
 const createCards = (cardsArr) => {
@@ -105,6 +169,12 @@ const createCards = (cardsArr) => {
     // console.log(card.name, card.href);
     const cardContainer = document.createElement("div");
     cardContainer.classList.add("project-card", "generated"), "visible";
+    let technologiesListItems = card.technologies
+      .map(
+        (technology) =>
+          `<img id="used-technologie" class="used-technologie" src="./assets/icons/SVG/${technology}.svg" alt="${technology}" />`
+      )
+      .join("");
     cardContainer.innerHTML = `
               <a href="./Projects/${card.href}/index.html"
                 ><img
@@ -115,18 +185,7 @@ const createCards = (cardsArr) => {
               <h3>${card.name}</h3>
               <ul>
                 <li>${card.description}</li>
-                <li>
-                  <img
-                    src="./assets/icons/SVG/html5.svg"
-                    alt="HTML5"
-                    class="used-technologie"
-                  />
-                  <img
-                    src="./assets/icons/SVG/css3.svg"
-                    alt="CSS3"
-                    class="used-technologie"
-                  />
-                </li>
+                <li>${technologiesListItems}</li>
               </ul>
     `;
     projectCards.appendChild(cardContainer);

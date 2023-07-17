@@ -164,7 +164,7 @@ li a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
+  gap: 3rem;
   padding: 1rem 2rem;
   transition: all 0.5s ease-in-out;
 }
@@ -261,6 +261,7 @@ h2 {
 .project-card h3 {
   text-align: center;
   font-size: 1.3rem;
+  height: 3rem;
   margin: 1rem 0;
 }
 
@@ -277,7 +278,13 @@ h2 {
   font-size: 1rem;
 }
 
-.project-card li:last-child img {
+.project-card li:first-child {
+  height: 3rem;
+}
+
+.project-card li:last-child img,
+.used-technologie,
+#used-technologie {
   display: inline-block;
   height: 2rem;
   width: 2rem;
