@@ -110,6 +110,8 @@ li a {
 
 .about-me-right {
   height: 40vh;
+  justify-self: center;
+  align-self: center;
 }
 
 .about-me-description {
@@ -427,5 +429,14 @@ footer {
     display: block;
     margin-bottom: 1rem;
     font-size: 1.2rem;
+  }
+
+  #about-me {
+    flex-direction: column;
+  }
+
+  .about-me-left {
+    order: 1;
+    width: 100%;
   }
 }
