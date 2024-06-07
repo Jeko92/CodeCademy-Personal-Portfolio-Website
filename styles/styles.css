@@ -65,6 +65,14 @@ h6 {
   display: block;
 }
 
+.d-block {
+  display: block;
+}
+
+.d-none {
+  display: none;
+}
+
 /* Header Styles */
 header {
   display: flex;
@@ -112,6 +120,7 @@ li a {
   height: 40vh;
   justify-self: center;
   align-self: center;
+  margin: 0 auto;
 }
 
 .about-me-description {

@@ -168,7 +168,7 @@ const createCards = (cardsArr) => {
   cardsArr.forEach((card) => {
     // console.log(card.name, card.href);
     const cardContainer = document.createElement("div");
-    cardContainer.classList.add("project-card", "generated"), "visible";
+    cardContainer.classList.add("project-card", "generated", "d-block");
     let technologiesListItems = card.technologies
       .map(
         (technology) =>
@@ -201,7 +201,7 @@ const hideCards = () => {
   for (const card of generatedCards) {
     // console.log(card.classList);
     if (card.classList.contains("generated")) {
-      card.classList.add("hidden");
+      card.classList.add("d-none");
     }
   }
 };
